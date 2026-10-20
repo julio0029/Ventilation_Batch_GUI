@@ -1,5 +1,7 @@
 # Shark and ray ventilation batch analysis
 
+Source repository: https://github.com/julio0029/Ventilation_Batch_GUI
+
 ## What it does
 
 This local desktop application recursively finds videos under a Dropbox folder, extracts a motion signal from species specific respiratory regions of interest, estimates ventilation rate using both a power spectrum and NeuroKit2 peak detection, and writes one CSV row per video.

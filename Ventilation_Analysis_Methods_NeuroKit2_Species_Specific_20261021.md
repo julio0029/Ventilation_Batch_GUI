@@ -10,6 +10,8 @@ Putative respiratory contractions were identified from the standardised motion t
 
 The program recorded frame rate, image dimensions, video duration, spectral estimate, NeuroKit2 peak estimate, number of accepted peaks, interpeak coefficient of variation, final frequency estimate, processing method, and processing status in a comma separated file. Diagnostic plots showing the raw and smoothed motion trace, standardised detrended trace, and detected events were retained for visual quality control. Recordings shorter than 5 s or 30 frames, recordings with a constant motion trace, incomplete video metadata, a zero area region, an unrecognised species label, or an unresolved spectral band were retained in the results table with a failure status rather than assigned a physiological value.
 
+The analysis code, installation instructions, and versioned Methods source are available at https://github.com/julio0029/Ventilation_Batch_GUI.
+
 Before inferential analysis, automated estimates should be compared with blinded manual counts from a stratified set of videos spanning each species, oxygen treatment, drug treatment, body orientation, camera geometry, and expected rate range. Agreement should be reported using a prespecified metric such as mean bias and limits of agreement or an intraclass correlation coefficient. This validation is particularly important because epaulette sharks and shovelnose rays differ in visible respiratory anatomy and in their responses to hypoxia. The present pipeline measures the periodicity of a selected visible respiratory movement and should not be interpreted as a direct measurement of minute ventilation or oxygen uptake.
 
 ## References
