@@ -1,0 +1,10 @@
+# Evidence map: shark and ray ventilation batch GUI
+
+| Claim | Status | Original source and location | Version or date | Verified | Uncertainty or limitation |
+| --- | --- | --- | --- | --- | --- |
+| Original method extracts motion in a fixed lower anterior ROI and estimates ventilation from power spectrum and peak detection | CONFIRMED | `../shark_ventilation_rate.py` | Existing project source | Yes | Original method was configured for a single shark video and fixed ROI |
+| Batch GUI recursively processes common local video formats and records folder metadata and estimates in one CSV | CONFIRMED | `ventilation_batch_gui.py` | 21 October 2026 | Syntax compiled and synthetic signal test completed in an isolated Python 3.11 environment | Requires the selected Dropbox folder to be locally synced |
+| Metadata distinguishes epaulette shark and shovelnose ray, plus hypoxia or normoxia and PBS or Poly, from folder or filename keywords | CONFIRMED | `ventilation_batch_gui.py`, `safe_metadata` | 21 October 2026 | Synthetic folder label test completed | Unrecognised generic shark or ray labels deliberately fail rather than being pooled |
+| Species specific ROIs are selected independently for epaulette sharks and shovelnose rays | CONFIRMED | `ventilation_batch_gui.py`, `VentilationGUI.choose_roi`, `Settings` | 21 October 2026 | Syntax review and code path inspection | Requires comparable camera geometry within each species |
+| NeuroKit2 is used for image derived respiratory contraction peak detection | CONFIRMED | `ventilation_batch_gui.py`, `neurokit_peaks` | 21 October 2026 | Isolated environment test recovered a 90 breaths per minute synthetic signal at 89.9 breaths per minute | Peak parameters need validation against manually counted recordings |
+| Recovered ventilation rates are biologically valid for the intended data | UNKNOWN | No annotated experimental videos accessible | 19 October 2026 | No | Validate against manual counts for every species, condition, orientation, and camera setup before scientific use |

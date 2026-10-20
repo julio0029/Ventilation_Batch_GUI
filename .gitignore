@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+ventilation_diagnostics/
+ventilation_results_*.csv
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.wmv
